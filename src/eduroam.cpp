@@ -30,13 +30,13 @@ bool connect_to_eduroam(const char *eduroam_id, const char *eduroam_password){
 }
 
 
-bool connect_to_eduroam(const char *eduroam_id, const char *eduroam_password, int timeout){
+bool connect_to_eduroam(const char *eduroam_id, const char *eduroam_password, int ms_to_wait){
   TaskHandle_t edu_connect_task;
-  TickType_t timeout_ticks = timeout / portTICK_PERIOD_MS;
+  TickType_t xTicksToWait = ms_to_wait / portTICK_PERIOD_MS;
   eduroam_recipe edrp = {eduroam_id, eduroam_password, xTaskGetCurrentTaskHandle()};
 
   xTaskCreate(connect_to_eduroam_task, "eduroam_connecting_task", 2048, &edrp, 0, &edu_connect_task);
-  int success =  ulTaskNotifyTake(pdTRUE, timeout_ticks);
+  int success =  ulTaskNotifyTake(pdTRUE, xTicksToWait);
   Serial.println("notify get:");
   Serial.println(success);
   vTaskDelete(edu_connect_task);
