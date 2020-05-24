@@ -10,9 +10,9 @@
   * @brief  Check Internet connectivity against an http site.
   *
   * @return
-  *    - 200: Your board is connected to Internet
-  *    - <0: Negated response code in the case of connectivity error
+  *    - true: Your board is connected to Internet
+  *    - false: Your board is connected to Internet
   */
-int check_internet_connectivity();
+bool check_internet_connectivity();
 
 #endif
