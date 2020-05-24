@@ -15,6 +15,9 @@ void connect_to_eduroam_task(void* void_edrp){
 
   WiFi.begin(ssid);
 
+  // TODO: throw error if eduroam not in range
+  // TODO: throw error if account not valid
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(200);
   }
@@ -37,8 +40,6 @@ bool connect_to_eduroam(const char *eduroam_id, const char *eduroam_password, in
 
   xTaskCreate(connect_to_eduroam_task, "eduroam_connecting_task", 2048, &edrp, 0, &edu_connect_task);
   int success =  ulTaskNotifyTake(pdTRUE, xTicksToWait);
-  Serial.println("notify get:");
-  Serial.println(success);
   vTaskDelete(edu_connect_task);
   return (bool)success;
 }
