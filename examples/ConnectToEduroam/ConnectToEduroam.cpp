@@ -1,4 +1,4 @@
-#include "eduroam.h"
+#include <eduroam.h>
 
 #define eduroam_ID "YourShanghaiTechEmailAddress"
 #define eduroam_PASSWORD "YourShanghaiTechEmaillPassword"

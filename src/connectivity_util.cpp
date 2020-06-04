@@ -7,5 +7,5 @@ bool check_internet_connectivity(){
   int response_code = httpClient.GET();
 
   // TODO: provide more info in log if connection check fails
-  return response_code == 200;
+  return response_code == HTTP_CODE_OK;
 }
