@@ -1,0 +1,24 @@
+{
+    "name": "ShanghaiTech WiFi Auth",
+    "keywords": "wifi, wi-fi, ShanghaiTech, eduroam",
+    "description": "ESP32 Library for ShanghaiTech WiFi & eduroam Authentication",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ShanghaitechGeekPie/Auth-esp32-to-ShanghaiTech-wifi.git"
+    },
+    "authors": [
+        {
+            "name": "Luxcoldury",
+            "email": "luxcoldury@gmail.com",
+            "maintainer": true
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "ArduinoJson"
+        }
+    ],
+    "version": "1.0",
+    "frameworks": "arduino",
+    "platforms": "espressif32"
+}
