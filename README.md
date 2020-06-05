@@ -7,9 +7,9 @@
 See examples for basic usage!  
 | Function | for |
 |  ----  | ----  |
-| connect_to_ShanghaiTech() | SSID:ShanghaiTech authentication |
-| connect_to_eduroam() | eduroam authentication |
-| check_internet_connectivity() | simple connectivity check |
+| ```connect_to_ShanghaiTech()``` | SSID:ShanghaiTech authentication |
+| ```connect_to_eduroam()``` | eduroam authentication |
+| ```check_internet_connectivity()``` | simple connectivity check |
 
 ## Install
 1. * **PlatformIO** - [ShanghaiTech WiFi Auth by Luxcoldury](https://platformio.org/lib/show/7415/ShanghaiTech%20WiFi%20Auth/installation)
