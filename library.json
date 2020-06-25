@@ -16,6 +16,18 @@
     "dependencies": [
         {
             "name": "ArduinoJson"
+        },
+        {
+            "name": "WiFi",
+            "platforms": "espressif32"
+        },
+        {
+            "name": "HTTPClient",
+            "platforms": "espressif32"
+        },
+        {
+            "name": "WiFiClientSecure",
+            "platforms": "espressif32"
         }
     ],
     "version": "1.0",
